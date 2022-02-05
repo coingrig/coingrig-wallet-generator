@@ -1,0 +1,8 @@
+framework module "Addr" {
+	header "ref.h"
+    header "Addr.objc.h"
+    header "Universe.objc.h"
+    header "Addr.h"
+
+    export *
+}
