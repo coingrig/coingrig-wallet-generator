@@ -4,7 +4,6 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { generateMnemonic, generateWallet } from '@coingrig/wallet-generator';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
 
   const start = async () => {
     let m: string = await generateMnemonic(12);

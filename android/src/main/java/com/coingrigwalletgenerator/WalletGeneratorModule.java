@@ -8,6 +8,8 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.module.annotations.ReactModule;
 
+import addr.Addr;
+
 @ReactModule(name = WalletGeneratorModule.NAME)
 public class WalletGeneratorModule extends ReactContextBaseJavaModule {
     public static final String NAME = "WalletGenerator";
@@ -30,5 +32,21 @@ public class WalletGeneratorModule extends ReactContextBaseJavaModule {
         promise.resolve(a * b);
     }
 
-    public static native int nativeMultiply(int a, int b);
+    @ReactMethod
+    public void generateMnemonic(int size, Promise promise) {
+      promise.resolve(Addr.generateMnemonic(size));
+    }
+
+  @ReactMethod
+  public void generateWallet(String mnemonic, String chain, Promise promise) {
+      try{
+        promise.resolve(Addr.generateWallet(mnemonic, chain));
+      }catch (Throwable e){
+        promise.reject(e);
+      }
+
+  }
+
+
+  public static native int nativeMultiply(int a, int b);
 }
