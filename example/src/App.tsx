@@ -1,18 +1,23 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from '@coingrig/wallet-generator';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { generateMnemonic, generateWallet } from '@coingrig/wallet-generator';
 
 export default function App() {
   const [result, setResult] = React.useState<number | undefined>();
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const start = async () => {
+    let m: string = await generateMnemonic(12);
+    let w = await generateWallet(m, 'BTC');
+    let x = JSON.parse(w);
+    console.log(x.address, x.privateKey);
+  };
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <TouchableOpacity onPress={start}>
+        <Text>CLICK</Text>
+      </TouchableOpacity>
     </View>
   );
 }
