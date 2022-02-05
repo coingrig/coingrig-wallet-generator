@@ -1,0 +1,8 @@
+framework module "CGWallet" {
+	header "ref.h"
+    header "CGWallet.objc.h"
+    header "Universe.objc.h"
+    header "CGWallet.h"
+
+    export *
+}

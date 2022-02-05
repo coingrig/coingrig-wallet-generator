@@ -56,6 +56,6 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation files('libs/addr-sources.jar')
+    implementation files('libs/CGWallet-sources.jar')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
 }

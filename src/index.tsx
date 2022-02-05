@@ -17,10 +17,6 @@ const WalletGenerator = NativeModules.WalletGenerator
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return WalletGenerator.multiply(a, b);
-}
-
 export function generateMnemonic(size: number): Promise<string> {
   return WalletGenerator.generateMnemonic(size);
 }

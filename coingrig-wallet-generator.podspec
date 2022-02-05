@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/coingrig/coingrig-wallet-generator.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm,swift}"
-  s.ios.vendored_frameworks = 'ios/Addr.xcframework'
+  s.ios.vendored_frameworks = 'ios/CGWallet.xcframework'
   s.dependency "React-Core"
 end

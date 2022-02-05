@@ -8,7 +8,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.module.annotations.ReactModule;
 
-import addr.Addr;
+import CGWallet.CGWallet;
 
 @ReactModule(name = WalletGeneratorModule.NAME)
 public class WalletGeneratorModule extends ReactContextBaseJavaModule {
@@ -24,23 +24,15 @@ public class WalletGeneratorModule extends ReactContextBaseJavaModule {
         return NAME;
     }
 
-
-    // Example method
-    // See https://reactnative.dev/docs/native-modules-android
-    @ReactMethod
-    public void multiply(int a, int b, Promise promise) {
-        promise.resolve(a * b);
-    }
-
     @ReactMethod
     public void generateMnemonic(int size, Promise promise) {
-      promise.resolve(Addr.generateMnemonic(size));
+      promise.resolve(CGWallet.generateMnemonic(size));
     }
 
   @ReactMethod
   public void generateWallet(String mnemonic, String chain, Promise promise) {
       try{
-        promise.resolve(Addr.generateWallet(mnemonic, chain));
+        promise.resolve(CGWallet.generateWallet(mnemonic, chain));
       }catch (Throwable e){
         promise.reject(e);
       }
