@@ -1,6 +1,6 @@
 # @coingrig/wallet-generator
 
-Blazing ⚡️ Fast BTC an ETH Wallet Generator library for React Native.
+Blazing ⚡️ Fast BTC an ETH Wallet Generator library for React Native, Android and iOS.
 This is a high performant native library written in GO.
 
 Todo:
