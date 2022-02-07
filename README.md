@@ -40,7 +40,7 @@ console.log(wallet.address, wallet.privateKey);
 ## Native
 It is also available to use in native projects (Android and iOS). 
 - For Android use the `CGWallet.aar` and `.jar` files from `android/libs`
-- For iOS you  use the `CGWallet.xcframework` from `ios/`
+- For iOS use the `CGWallet.xcframework` from `ios/`
 
 ## Contributing
 
