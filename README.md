@@ -1,7 +1,7 @@
 # @coingrig/wallet-generator
 
 Blazing ⚡️ Fast BTC and ETH Wallet Generator library for React Native, Android and iOS.
-This is a high performant native library written in GO.
+This is a high performance native library written in GO.
 
 Todo:
 - [x] Bitcoin (segwit)
@@ -38,7 +38,7 @@ console.log(wallet.address, wallet.privateKey);
 
 ```
 ## Native - Android and iOS (Java, Kotlin, Objective-C, Swift)
-It is also available to use in native projects (Android and iOS). 
+It is also available to use in native projects (Android and iOS).
 - For Android use the `CGWallet.aar` and `.jar` files from `android/libs`
 - For iOS use the `CGWallet.xcframework` from `ios/`
 

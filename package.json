@@ -1,7 +1,7 @@
 {
   "name": "@coingrig/wallet-generator",
   "version": "0.1.0",
-  "description": "Coingrig high performant Wallet Generator",
+  "description": "Coingrig high performance Wallet Generator",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
