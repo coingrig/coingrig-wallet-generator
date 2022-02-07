@@ -31,8 +31,8 @@ const words = 12; // or 24
 const mnemonic = await generateMnemonic(words);
 
 // Generate wallet
-const coinType = 'BTC' // or ETH
-let wallet = await generateWallet(mnemonic, coinType);
+const chain = 'BTC' // or ETH
+let wallet = await generateWallet(mnemonic, chain);
 wallet = JSON.parse(wallet);
 console.log(wallet.address, wallet.privateKey);
 
