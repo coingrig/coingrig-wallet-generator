@@ -1,8 +1,10 @@
 # @coingrig/wallet-generator
 
-Coingrig Wallet Generator
+Blazing ⚡️ Fast BTC an ETH Wallet Generator library for React Native.
+This is a high performant native library written in GO.
 
-## Installation
+## React Native
+### Installation
 
 ```sh
 npm install @coingrig/wallet-generator
@@ -11,12 +13,23 @@ npm install @coingrig/wallet-generator
 ## Usage
 
 ```js
-import { multiply } from "@coingrig/wallet-generator";
+import { generateMnemonic, generateWallet } from '@coingrig/wallet-generator';
 
-// ...
+// Generate mnemonic
+const words = 12; // or 24
+const mnemonic = await generateMnemonic(words);
 
-const result = await multiply(3, 7);
+// Generate wallet
+const coinType = 'BTC' // or ETH
+let wallet = await generateWallet(mnemonic, coinType);
+wallet = JSON.parse(wallet);
+console.log(wallet.address, wallet.privateKey);
+
 ```
+## Native
+It is also available to use in native projects (Android and iOS). 
+- For Android use the `CGWallet.aar` and `.jar` files from `android/libs`
+- For iOS you  use the `CGWallet.xcframework` from `ios/`
 
 ## Contributing
 
