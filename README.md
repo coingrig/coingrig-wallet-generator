@@ -4,7 +4,7 @@ Blazing ⚡️ Fast BTC an ETH Wallet Generator library for React Native.
 This is a high performant native library written in GO.
 
 Todo:
-- [x] Bitcoin
+- [x] Bitcoin (segwit)
 - [x] Ethereum
 - [ ] Bitcoin Cash
 - [ ] Litecoin
