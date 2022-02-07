@@ -21,7 +21,7 @@ Todo:
 npm install @coingrig/wallet-generator
 ```
 
-## Usage
+### Usage
 
 ```js
 import { generateMnemonic, generateWallet } from '@coingrig/wallet-generator';
