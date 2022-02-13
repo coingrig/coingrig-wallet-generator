@@ -51,11 +51,11 @@ repositories {
     google()
     mavenCentral()
     jcenter()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
+    implementation 'com.github.coingrig:cgwallet-android-artifact:0.1.6'
     implementation "com.facebook.react:react-native:+"  // From node_modules
-    implementation files('libs/CGWallet-sources.jar')
-    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
 }
